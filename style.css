@@ -1,0 +1,359 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: 0.3s;
+}
+
+
+.cookieBanner{
+    background: white;
+    z-index: 999;
+}
+
+.firstVisitBanner{
+    width: 400px;
+    border: 1px solid lightgray;
+    position: fixed;
+    bottom: 4%;
+    left: 2%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    animation: firstVisitBanner 0.3s linear forwards;
+}
+
+@keyframes firstVisitBanner {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.firstVisitButtons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+}
+
+.firstVisitButtons button{
+    flex: 1;
+    padding: 10px 15px;
+    border: #1863dc solid 2px;
+    cursor: pointer;
+    background: white;
+}
+
+.firstVisitButtons button:hover{
+    color: #1863dcc9;
+}
+
+#fv-btn-accept{
+    background: #1863dc;
+    color: white;
+}
+
+#fv-btn-accept:hover{
+    background: #4682e3;
+    color: white;
+}
+
+
+
+.cookieButton{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 2%;
+    left: 1%;
+}
+
+.cookieButton img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.cookieBanner{
+    max-width: 700px;
+    border-radius: 6px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    padding: 30px;
+    padding-top: 90px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    animation: openCookieBanner 0.3s linear forwards;
+}
+
+
+@keyframes openCookieBanner {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+@keyframes CloseCookieBanner {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+
+
+
+.bannerTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 30px 30px 20px 30px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    border: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bannerTop h3, .bannerHeader{
+    color: rgb(33, 33, 33);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.bannerTop span{
+    cursor: pointer;
+}
+
+.cookieDes{
+    color: rgb(33, 33, 33);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+
+.showMore{
+    font-weight: 600;
+    color: rgb(24, 99, 220);
+    font-size: 14px;
+    display: inline;
+}
+
+
+.AllCookiesInfo{
+    margin-top: 20px;
+}
+
+.bannerMiddle{
+    height: 50vh;
+    overflow: scroll;
+    padding-bottom: 50px;
+    padding-right: 10px;
+}
+
+.cookies{
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    column-gap: 5px;
+    position: relative;
+}
+
+.cookieInfo{
+    position: relative;
+}
+
+.cookies .switch{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.arrow span{
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+
+.cookieHeadlines{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: rgb(33, 33, 33);
+}
+
+.cookieDesTable{
+    background: #f4f4f4;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.cookieDesTableName{
+    width: 20%;
+    font-weight: 400;
+}
+
+
+#toggleButton{
+    cursor: pointer;
+}
+
+.BannerBottom{
+    background-color: white;
+    border-top: #dee1e2 1px solid;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border-radius: 0px 0px 6px 6px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+
+.BannerBottom button{
+    padding: 10px 0px;
+    cursor: pointer;
+    color: #1863dc;
+    border: #1863dc solid 2px;
+    background: white;
+    font-size: 14px;
+    flex: 1;
+}
+
+.BannerBottom button:hover{
+    color: #1863dcc9;
+}
+
+
+
+#main-banner-accept{
+    background: #1863dc;
+    color: white;
+}
+
+#main-banner-accept:hover{
+    background: #4682e3;
+    color: white;
+}
+
+
+/* toogle  */
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(14px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  
+
+/* Media query for desktops and larger screens */
+@media (max-width: 1024px) {
+    .cookieBanner {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .BannerBottom {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .bannerMiddle{
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    .firstVisitBanner{
+        width: 80%;
+    }
+    .firstVisitButtons {
+        flex-direction: column;
+        flex:1;
+        row-gap: 12px;
+    }
+}

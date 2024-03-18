@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Tailwind CSS</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <div class="cookieConsent">
+
+      <div class="firstVisitBanner" id="firstVisitBanner" style="display: none;">
+
+        <h3 class="bannerHeader">
+          We value your privacy
+        </h3>
+
+        <p class="cookieDes">
+          We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+        </p>
+
+        <div class="firstVisitButtons">
+          <button id="fv-btn-customize" onclick="fvBannerOpen()">Customize</button>
+          <button class="abtnHide" id="fv-btn-reject">Reject All</button>
+          <button class="abtnHide" id="fv-btn-accept">Accept All</button>
+        </div>
+
+      </div>
+
+    <div class="cookieBanner " id="cookieBanner" style="display: none;">
+
+      <div class="bannerTop">
+        <h3>Customize Consent Preferences</h3>
+        <span id="bannerclose" onclick="bannerClose()" class="material-symbols-outlined">
+          close
+        </span>
+      </div>
+
+      <div class="bannerMiddle">
+        <div class="headerMessage">
+          <p class="cookieDes"> We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. </p>
+          <p class="cookieDes" style="display: inline;"> The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. </p>
+          <p class="cookieDes deshide" style="display: none;"> We also use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. These cookies will only be stored in your browser with your prior consent. </p>
+          <p class="cookieDes deshide" style="display: none;"> We also use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. These cookies will only be stored in your browser with your consent. </p>
+          <p class="showMore" onclick="toggleText()" id="toggleButton">..Show more</p>
+        </div>
+  
+        <div class="AllCookiesInfo">
+  
+          <div class="cookies">
+            <div class="arrow">
+              <span class="material-symbols-outlined"> arrow_forward_ios </span>
+            </div>
+            <div class="cookieInfo">
+              
+              <label class="switch">
+                  <input id="necessary" type="checkbox" checked disabled>
+                  <span class="slider round"></span>
+              </label>
+  
+              <h3 class="cookieHeadlines" id="cookies">Necessary</h3>
+              <p class="cookieDes"> Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. </p>
+              <div class="cookieDesTable" id="cookieDesTable" style="display: none;">
+                <div class="cookie-des-name"> name </div>
+                <div class="cookie-des-info"> deatisl </div>
+                <div class="cookie-des-name"> name </div>
+                <div class="cookie-des-info"> deatisl </div>
+                <div class="cookie-des-name"> name </div>
+                <div class="cookie-des-info"> This cookie is associated with sites using Google Tag Manager to load other scripts and code into a page. Where it is used it may be regarded as Strictly Necessary as without it, other scripts may not function correctly. </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="cookies">
+              <div class="arrow">
+                <span class="material-symbols-outlined"> arrow_forward_ios </span>
+              </div>
+              <div class="cookieInfo">
+                
+                <label class="switch">
+                    <input id="functional" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                
+                <h3 class="cookieHeadlines" id="cookies">Functional</h3>
+                <p class="cookieDes"> Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.</p>
+                <div class="cookieDesTable" id="cookieDesTable" style="display: none;">
+                  <div class="cookie-des-name"> name </div>
+                  <div class="cookie-des-info"> deatisl </div>
+                  <div class="cookie-des-name"> name </div>
+                  <div class="cookie-des-info"> deatisl </div>
+                  <div class="cookie-des-name"> name </div>
+                  <div class="cookie-des-info"> This cookie is associated with sites using Google Tag Manager to load other scripts and code into a page. Where it is used it may be regarded as Strictly Necessary as without it, other scripts may not function correctly. </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="cookies">
+              <div class="arrow">
+                <span class="material-symbols-outlined"> arrow_forward_ios </span>
+              </div>
+              <div class="cookieInfo">
+                
+                <label class="switch">
+                    <input id="analytics" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                
+                <h3 class="cookieHeadlines" id="cookies">Analytics</h3>
+                <p class="cookieDes"> Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.</p>
+                <div class="cookieDesTable" id="cookieDesTable" style="display: none;">
+                  <div class="cookie-des-name"> name </div>
+                  <div class="cookie-des-info"> deatisl </div>
+                  <div class="cookie-des-name"> name </div>
+                  <div class="cookie-des-info"> deatisl </div>
+                  <div class="cookie-des-name"> name </div>
+                  <div class="cookie-des-info"> This cookie is associated with sites using Google Tag Manager to load other scripts and code into a page. Where it is used it may be regarded as Strictly Necessary as without it, other scripts may not function correctly. </div>
+                </div>
+              </div>
+            </div>
+            <div class="cookies">
+              <div class="arrow">
+                <span class="material-symbols-outlined"> arrow_forward_ios </span>
+              </div>
+              <div class="cookieInfo">
+                
+                <label class="switch">
+                    <input id="advertisement" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                
+                <h3 class="cookieHeadlines" id="cookies">Advertisement</h3>
+                <p class="cookieDes"> Advertisement cookies are used to provide visitors with customized advertisements based on the pages you visited previously and to analyze the effectiveness of the ad campaigns.</p>
+                <div class="cookieDesTable" id="cookieDesTable" style="display: none;">
+                  <div class="cookie-des-name"> name </div>
+                  <div class="cookie-des-info"> deatisl </div>
+                  <div class="cookie-des-name"> name </div>
+                  <div class="cookie-des-info"> deatisl </div>
+                  <div class="cookie-des-name"> name </div>
+                  <div class="cookie-des-info"> This cookie is associated with sites using Google Tag Manager to load other scripts and code into a page. Where it is used it may be regarded as Strictly Necessary as without it, other scripts may not function correctly. </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="BannerBottom">
+        <button id="main-banner-reject">Reject All</button>
+        <button id="main-banner-custom">Save My Preferences</button>
+        <button class="btnAcceptAll" id="main-banner-accept">Accept All</button>
+      </div>
+    
+    </div>
+
+    <div id="cookieButton" class="cookieButton" onclick="cbcOpenClose()" style="display: none;">
+      <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="">
+    </div>
+    </div>
+
+    <script src="consent.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </body>
+</html>
